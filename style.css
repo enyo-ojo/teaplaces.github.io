@@ -1,0 +1,114 @@
+body{
+    font-family: 'Truculenta', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    border: 10px solid #fff;
+    background-color: #6ac597cc;
+    min-height: 100vh;
+    margin: 0;
+    padding: .5em;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 12em;
+}
+li{
+    list-style: none;
+    margin-left: 1.5em;
+}
+section{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+h1{
+    text-transform:capitalize;
+    font-size:4em;
+    margin-bottom: 0;
+}
+h1::before{
+    content: '';
+    display: block;
+    width: 5em;
+    height: 3px;
+    margin-bottom: 2px;
+    background: #6b3110;
+    margin: 0 auto;
+}
+.logo{
+    color: #6b3110;
+    letter-spacing: 3px;
+}
+.active{
+    color: #065F46;
+    cursor: pointer;
+}
+.active::after{
+    content: '';
+    display: block;
+    width: 1em;
+    height: 3px;
+    background: #065F46;
+    margin: 0 auto;
+}
+.menu{
+    display: flex;
+}
+.btn{
+    display: inline-block;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+.brown{
+    background: #6b3110;
+    color: white;
+    margin-right: 15px;
+}
+.brown:hover{
+    color: #065F46;
+    border: 1px solid #065F46;
+    background-color: #6ac59800;
+    transform: scale(1.1);
+}
+.green{
+    color: #065F46;
+    border: 1px solid #065F46;
+}
+.green:hover{
+    background: #6b3110;
+    color: white;
+    transform: scale(1.1);
+}
+@media (max-width:600px) {
+    body{
+        overflow: auto;
+    }
+    h1::before{
+        width:2em
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        text-transform: uppercase;
+        margin-bottom: 4em;
+    }
+    li{
+        margin-left:0;
+        padding: .3em;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+    .green{
+        margin-top: 15px;
+    }
+}
